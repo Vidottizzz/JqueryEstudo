@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jquery</title>
     <style>
-        #square {
-            
+        #red {            
             width: 500px;
             height: 500px;
             background-color: red;
+            display: none;
+            position: absolute;
+        }
+
+        #green {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            position:absolute;
         }
     </style>
 </head>
 <body>
-     <button  id="button">Fade In</button>
-     <div id="square"></div>
+     <button id="button">hide</button>
+
+     <div id="green"></div>
+     <div id="red"></div>
+     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -24,9 +35,37 @@
         // $('#button').click((e) => {
         //     console.log(e.target);
         // })
-        $('#button').click(() => {
-            $("#square").fadeOut();
-        })
-    </script>
+        //EFEITO DE DESAPARECENDO .fadeOut(); APARECENDO .fadeIn(3000);// FadeTo pode colocar o quanto de opacidade .fadeTo(3000, 0.5 ) vai até 0.5 de opacidade
+
+        //         $('#button').click(() => {
+        //     $("#square").fadeToggle();
+        // })
+        // $('#button').click(() => {
+        //     $("#square").slideDown();
+        // })
+        // $('#button').click(() => {
+        //     $("#green").slideUp(1000);
+        // })
+        //vai crescer 500h e 500w
+        // $('#button').click(() => {
+        //     $("#green").animate({ height: 500, width: 500 }, 3000)
+        // })
+        // //faz parar a animação
+        // $('#stop').click(() => {
+        //     $('#green').stop();
+
+        // })
+        
+        //o console só irá aparecer após a função .hide acabar, ou seja, ela vai esperar 
+        //a função acabar e só depois ira mostrar o green escondido
+
+        //depois de esconder o verde vai aparecer o vermelho
+        // $('#button').click(() => {
+        //     $('#green').hide(2000, () =>  $('#green').show(2000) );            
+        // })
+        //a mesma coisa de cima pode ser feito utilizando encadeamanto,,porém usando encadeamento
+        // quando pegamos o mesmo elemento
+        $('#button').click(() => $('#green').hide(2000).show(2000));
+            </script>
 </body>
 </html>
