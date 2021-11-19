@@ -244,6 +244,7 @@
 // setTimeout(() => {
 //     $('h1').removeClass('bg-blue')
 // }, 3000)
+
 // pra trocar de uma classe para outra podemos usar o toggle
 // setTimeout(() => {
 //     $('h1').toggleClass('bg-blue')
@@ -251,8 +252,39 @@
 // setTimeout(() => {
 //     $('h1').toggleClass('bg-blue')
 // }, 3000)
+
  // vai colocar se não tiver, e vai tirar se tiver
  // mas se quiser fazer ele indo e voltando sem parar podemos usar o setInterval
- setInterval(() => {
-     $('h1').toggleClass('bg-blue');
- }, 300);
+
+//  setInterval(() => {
+//      $('h1').toggleClass('bg-blue');
+//  }, 300);
+
+// OUTRO MODO DE PEgAR UM ELEMENTO DO CSS
+// ele vai ler qual é a propriedade do elemento que CSS que escolher
+
+// console.log($('h1').css('background-color'));
+
+//Pode alterar o valor do elemento também utilizando a função css()
+// console.log($('h1').css('font-size', 50));
+
+//e para alterar mais de um elemento na função css() colocamos tudo dentro de chaves na estrutura de um objeto
+
+// console.log($('h1').css({
+//     'font-size': 50,
+//     'background-color': 'blue'
+// }));
+
+// ----------- REDIMENSIONANDO ELEMENTOS ----------------
+
+let box = $('.box');
+
+
+box.append('largura:', box.width(), '<br>',
+     'largura + padding:', box.innerWidth(), '<br>',
+     'largura + padding + borda', box.outerWidth(), '<br>',
+     'largura + padding + borda + margem:', box.outerWidth(true));
+
+//PARA ALTERAR
+box.outerWidth(600);
+
