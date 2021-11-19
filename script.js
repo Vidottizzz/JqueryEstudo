@@ -176,6 +176,52 @@
 //caso eles ja tenham o nome setado pro item, e só queira incrementar o número
 // faz assim (oValue (original value é no caso o valor que ja foi setado no html > name))
 //nesse exemplo é "name = "Item""
-$('li').css('color','blue').attr('name', (i, oValue) => {return oValue + i;});
-$('input').attr('maxlength', 5).attr('type','password');
+// $('li').css('color','blue').attr('name', (i, oValue) => {return oValue + i;});
+// $('input').attr('maxlength', 5).attr('type','password');
 
+// Não utilizaremos mais class para selecionar um elemento, vamos utilizar o atributo key
+// console.log($('[key = 2]').remove());
+//nas duas listas tem a mesma key, desse modo ira deletar as 2 keys iguais da lista1 e lista2
+// para deletar uma faremos o exemplo abaixo, Na lista 1 irá deletar o key 2
+// $('#lista1').find('[key = 2]').remove();
+
+//------------ REMOVER ELEMENTOS DA TELA ---------------------
+//removerá a lista toda
+//$('#lista1').remove();
+// desse modo removerá só os filhos do elemento, que é o empty, ou seja, deixar o elemento pai vazio
+//$('#lista1').empty();
+// o remove() permite que coloquemos um argumento, para remover um ou mais itens de um mesmo pai, ja o empty
+//tira todos os filhos do pai, com o argumento no remove podemos escolher quais tiraremos
+// $('li').remove('.item1 , .item2')
+
+//------------- ADICIONAR ITENS A TELA ----------------------
+// PARA adicionar itens podemos fazer como no exemplo que trocamos os li's da ul com 
+//console.log($('#lista1').html('<li>Novo item 1</li> <li>Novo Item 2</li>'));
+//mas isso ira substituir os itens, e não adicionar, para adicionar: 
+
+// let lista1 = $('#lista1');
+
+// let items = lista1.html();
+
+// lista1.html(items + '<li>Teste</li>');
+
+// ----------USANDO APPEND E PREPEND PARA ADICIONAR
+
+//porém um jeito melhor de fazer isso é usando um método do Jquery chamado append (juntar)
+// desse modo irá adicionar ao final da estrutura,
+
+let lista1 = $('#lista1');
+
+// lista1.append("<li>Novo teste</li>");
+
+//Já desse modo irá adicionar ao inicio da estrutura
+
+// lista1.prepend('<li>Novo teste</li>');
+
+// ----------- USANDO BEFORE E AFTER PARA ADICIONAR
+
+// A Diferença entre o append e o prepend , é que o after coloca o elemento após elemento pai escolhido , fora dele
+//e o before é que é antes do elemento pai escolhido, por exemplo:
+
+lista1.after("<li>Novo teste</li>");
+lista1.before("<li>Novo teste</li>");
