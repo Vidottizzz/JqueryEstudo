@@ -277,14 +277,18 @@
 
 // ----------- REDIMENSIONANDO ELEMENTOS ----------------
 
-let box = $('.box');
+// let box = $('.box');
 
 
-box.append('largura:', box.width(), '<br>',
-     'largura + padding:', box.innerWidth(), '<br>',
-     'largura + padding + borda', box.outerWidth(), '<br>',
-     'largura + padding + borda + margem:', box.outerWidth(true));
+// box.append('largura:', box.width(), '<br>',
+//      'largura + padding:', box.innerWidth(), '<br>',
+//      'largura + padding + borda', box.outerWidth(), '<br>',
+//      'largura + padding + borda + margem:', box.outerWidth(true));
 
-//PARA ALTERAR
-box.outerWidth(600);
+// //PARA ALTERAR
+// box.outerWidth(600);
+
+//OQUE JQUERY FAZ DE MELHOR, QUE É SELECIONAR ELEMENTOS NO DOM, E VAMOS SELECIONAR ELEMENTOS QUE SÃO IRMÃOS (SIBLINgS, QUE ESTÃO)
+// NO MESMO ANDAR
+
 
