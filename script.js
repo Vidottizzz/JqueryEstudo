@@ -210,7 +210,7 @@
 //porém um jeito melhor de fazer isso é usando um método do Jquery chamado append (juntar)
 // desse modo irá adicionar ao final da estrutura,
 
-let lista1 = $('#lista1');
+// let lista1 = $('#lista1');
 
 // lista1.append("<li>Novo teste</li>");
 
@@ -221,7 +221,38 @@ let lista1 = $('#lista1');
 // ----------- USANDO BEFORE E AFTER PARA ADICIONAR
 
 // A Diferença entre o append e o prepend , é que o after coloca o elemento após elemento pai escolhido , fora dele
-//e o before é que é antes do elemento pai escolhido, por exemplo:
+//e o before é que é antes do elemento pai escolhido, e pode colocar estrutura HTML dentro de todas
+// funções,  por exemplo:
 
-lista1.after("<li>Novo teste</li>");
-lista1.before("<li>Novo teste</li>");
+// lista1.after("<li>Novo teste</li>");
+// lista1.before("<li>Novo teste</li>");
+
+// let div = $('.rect');
+// let nome = "henrique";
+// let sobrenome = "Vidotti"
+
+// div.after(nome, " ", sobrenome);
+// div.after("<li>oi</li>");
+
+// --------------- MODIFICANDO O CSS ------------------
+
+// $('h1').addClass('bg-blue');
+
+// setTimeout(() => {
+//     $('h1').addClass('bg-blue')
+// }, 1000)
+// setTimeout(() => {
+//     $('h1').removeClass('bg-blue')
+// }, 3000)
+// pra trocar de uma classe para outra podemos usar o toggle
+// setTimeout(() => {
+//     $('h1').toggleClass('bg-blue')
+// }, 1000)
+// setTimeout(() => {
+//     $('h1').toggleClass('bg-blue')
+// }, 3000)
+ // vai colocar se não tiver, e vai tirar se tiver
+ // mas se quiser fazer ele indo e voltando sem parar podemos usar o setInterval
+ setInterval(() => {
+     $('h1').toggleClass('bg-blue');
+ }, 300);
